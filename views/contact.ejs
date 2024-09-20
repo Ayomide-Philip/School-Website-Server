@@ -1,0 +1,76 @@
+<%- include("partials/header.ejs") %>
+    <link rel="stylesheet" href="./stylesheet/contact.css">
+    <!-- End section of the nav bar -->
+    <!-- ========== Start of th main content ========== -->
+    <div class="main-container">
+        <div class="image-container">
+            <div class="image">
+                <img src="./images/school_image-container.jpg" alt="Fountain Option Knowledge High School">
+            </div>
+            <div class="text-overlay">
+                <h1>Fountain Option Knowledge High School</h1>
+                <p>Contact</p>
+            </div>
+        </div>
+        <!-- ========== Start of the content section ========== -->
+        <div class="content-container">
+
+            <div class="contact-form">
+                <div class="form">
+                    <h1>Contact Us</h1>
+                    <form>
+                        <div class="input">
+                            <input type="text" name="name" id="name" placeholder="Input your Full Name"
+                                autocomplete="name">
+                            <p class="error " id="name-error"></p>
+                        </div>
+                        <div class="input">
+                            <input type="email" name="emailAddress" id="emailAddress"
+                                placeholder="Input your Email Address" autocomplete="email">
+                            <p class="error" id="email-error"></p>
+                        </div>
+                        <div class="input">
+                            <textarea name="message" id="message" cols="20" rows="7"
+                                placeholder="Input your Message.(Minimum Message Length is 20 letters)"></textarea>
+                            <p class="error " id="message-error"></p>
+                        </div>
+                        <div class="button">
+                            <input type="submit" value="Submit" id="submit">
+                        </div>
+                    </form>
+                </div>
+                <div class="image-container">
+                    <img src="./images/school_image-container.jpg" alt="school Logo">
+                </div>
+            </div>
+        </div>
+        <!-- ========== End of the content section ========== -->
+
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="social-media-account">
+                <div> <a href="#" target="_blank"><img src="./images/facebook-circle-svgrepo-com.svg"
+                            alt="facebook-circle-svgrepo-com"></a>
+                </div>
+                <div> <a href="#" target="_blank"><img src="./images/instagram-svgrepo-com.svg"
+                            alt="instagram-svgrepo-com"></a>
+                </div>
+                <div> <a href="#" target="_blank"><img src="./images/twitter-round-svgrepo-com.svg"
+                            alt="twitter-round-svgrepo-com"></a></div>
+            </div>
+            <div>
+                <span> &copy; <span id="date"> </span> The FOKHS. All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+    <!-- ========== End of th main content ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="./script/script.js"></script>
+    <script src="./script/contact.js"></script>
+    </body>
+
+    </html>
