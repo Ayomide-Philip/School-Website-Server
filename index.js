@@ -9,6 +9,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 env.config();
 
 app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/testimonial", (req, res) => {
   res.render("testimonial.ejs");
 });
 
