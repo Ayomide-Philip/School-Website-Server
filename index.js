@@ -20,16 +20,16 @@ app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
 
-app.post("/contact", (req, res) => {
-  res.render("contact.ejs", { message: req.body });
-});
-
 app.get("/testimonial", (req, res) => {
   res.render("testimonial.ejs");
 });
 
 app.get("/login", (req, res) => {
   res.render("login.ejs");
+});
+
+app.post("/contact", (req, res) => {
+  res.render("contact.ejs", { message: req.body });
 });
 
 app.listen(port, () => {
