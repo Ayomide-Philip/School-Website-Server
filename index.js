@@ -19,8 +19,12 @@ const db = new pg.Client({
 
 db.connect();
 
-async function sendContact() {
-  const request = db.query("SELECT ")
+async function sendContact(name, email, message) {
+  const request = await db.query(
+    "INSERT INTO contact_message (name,email_address,message) VALUES ($1,$2,$3) RETURNING email_address",
+    [name, email, message]
+  );
+  return request;
 }
 
 app.get("/", (req, res) => {
@@ -43,8 +47,17 @@ app.get("/login", (req, res) => {
   res.render("login.ejs");
 });
 
-app.post("/contact", (req, res) => {
-  res.render("contact.ejs", { message: req.body });
+app.post("/contact", async (req, res) => {
+  const name = req.body.name;
+  const email = req.body.emailAddress;
+  const message = req.body.message;
+  try {
+    const response = await sendContact(name, email, message);
+    console.log(response);
+    res.render("contact.ejs", { message: req.body });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(port, () => {
