@@ -28,6 +28,10 @@ app.get("/testimonial", (req, res) => {
   res.render("testimonial.ejs");
 });
 
+app.get("/login", (req, res) => {
+  res.render("login.ejs");
+});
+
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
