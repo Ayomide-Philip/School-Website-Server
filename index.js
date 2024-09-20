@@ -19,6 +19,10 @@ const db = new pg.Client({
 
 db.connect();
 
+async function sendContact() {
+  
+}
+
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
