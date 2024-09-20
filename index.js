@@ -20,9 +20,9 @@ app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
 
-app.post("/contact", (req,res)=>[
-  
-])
+app.post("/contact", (req, res) => {
+  console.log(req.body);
+});
 
 app.get("/testimonial", (req, res) => {
   res.render("testimonial.ejs");
