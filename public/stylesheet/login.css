@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.navbar-brand>img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+nav {
+    background-color: green !important;
+    z-index: 1;
+
+}
+
+nav a {
+    color: white !important;
+    font-family: "SUSE", sans-serif;
+}
+
+nav a:hover {
+    color: black !important;
+    border: none;
+    border-bottom: 2px solid;
+    text-transform: uppercase;
+}
+
+nav {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+footer {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 1.5%;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+div.social-media-account>div>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+div.social-media-account {
+    display: flex
+}
+
+div.social-media-account>div {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+div.social-media-account>div>a>img:hover {
+    padding-bottom: 20px;
+}
+
+div.main-container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+div.content-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInDownBig;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+
+
+body {
+    background-color: #F5F7F8;
+}
+
+input[type="password"],
+input[type="text"] {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid;
+    outline: none;
+    font-size: large;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    border-bottom: 2px solid green;
+}
+
+input {
+    font-size: large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+div.input {
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+
+input[type="email"],
+input[type="text"] {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid;
+    outline: none;
+}
+
+input[type="email"]:focus {
+    border-bottom: 2px solid green;
+}
+
+input[type="password"]:focus::placeholder,
+input[type="email"]:focus::placeholder,
+input[type="text"]:focus::placeholder {
+    color: transparent;
+}
+
+div.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"] {
+    background-color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    border: 2px solid green;
+    color: green;
+    font-size: larger;
+    font-weight: 500;
+}
+
+input[type="submit"]:hover {
+    background-color: green;
+    color: white;
+}
+
+div.form>h1 {
+    color: green;
+    font-size: xx-large;
+    font-weight: 700;
+    text-align: center;
+    font-family: "SUSE", sans-serif;
+    text-transform: uppercase;
+}
+
+.error {
+    color: red;
+    font-size: large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+div.contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    background-color: white;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+div.form-logo>img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+div.form {
+    width: 100%;
+}
+
+img.eye {
+    width: 30px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
+div.password {
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    div.contact-form {
+        width: 50%;
+    }
+}
+
+@media (max-width: 426px) {
+    div.contact-form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 376px) {
+    div.contact-form {
+        width: 90%;
+    }
+}
