@@ -20,7 +20,7 @@ const db = new pg.Client({
 db.connect();
 
 async function sendContact() {
-  
+  const request = db.query("SELECT ")
 }
 
 app.get("/", (req, res) => {
