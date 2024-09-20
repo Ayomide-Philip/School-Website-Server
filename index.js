@@ -8,7 +8,6 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 env.config();
 
-
 app.get("/", (req, res) => {
   res.render("testimonial.ejs");
 });
