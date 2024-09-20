@@ -15,7 +15,23 @@
         <!-- ========== Start of the content section ========== -->
         <div class="content-container">
             <% if (locals.message) { %>
-                <h1>Thank you for droping your feedback we would contact you as soon as possible</h1>
+                <div class="thank-you">
+                    <div class="thank-you-image">
+                        <img src="./images/checkmark-complete-correct-svgrepo-com.svg"
+                            alt="checkmark-complete-correct-svgrepo-com">
+                    </div>
+                    <div class="thank-you-message">
+                        <h1>Thank you.</h1>
+                        <p>Thank you for reaching out! We appreciate your message and value your input. We’ll respond as
+                            early as possible, the reply would be sent to your provided email address
+                            <span class="email">
+                                <%= message.emailAddress %>
+                            </span> . If you
+                            have any more questions, feel free to ask anytime. Your feedback is
+                            essential to us and helps us improve our services. Thanks again for connecting with us!
+                        </p>
+                    </div>
+                </div>
                 <% } else { %>
                     <div class="contact-form">
                         <div class="form">
