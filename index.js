@@ -22,6 +22,7 @@ app.get("/contact", (req, res) => {
 
 app.post("/contact", (req, res) => {
   console.log(req.body);
+  res.render("contact.ejs", { message: req.body });
 });
 
 app.get("/testimonial", (req, res) => {
