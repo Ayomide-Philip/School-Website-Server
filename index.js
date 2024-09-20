@@ -10,10 +10,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 env.config();
 
 const db = new pg.Client({
-  user: PG_CLIENT_USER,
-  database: PG_CLIENT_DATABASE,
-  host: PG_CLIENT_HOST,
+  user: process.env.PG_CLIENT_USER,
+  database: process.env.PG_CLIENT_DATABASE,
+  host: process.env.PG_CLIENT_HOST,
+  password: process.env.PG_CLIENT_PASSWORD,
+  port: process.env.PG_CLIENT_PORT,
 });
+
+db.connect();
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
