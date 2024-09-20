@@ -137,7 +137,7 @@ div.content-container {
     justify-content: center;
     align-items: center;
     animation: fadeInDownBig;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-delay: 1s;
 }
 
@@ -292,4 +292,48 @@ div.form>h1 {
     font-size: large;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
+}
+
+div.thank-you {
+    width: 50%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.thank-you-image>img {
+    width: 150px;
+}
+
+div.thank-you-message {
+    text-align: center;
+}
+
+div.thank-you-message>h1 {
+    font-size: xx-large;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+}
+
+div.thank-you-message>p {
+    font-size: large;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+@media (max-width: 426px) {
+    div.thank-you {
+        width: 90%;
+        background-color: white;
+        padding: 2%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
