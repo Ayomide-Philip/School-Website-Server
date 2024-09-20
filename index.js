@@ -9,6 +9,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 env.config();
 
+const db = new pg.Client({
+  user: PG_CLIENT_USER,
+  database: PG_CLIENT_DATABASE,
+  host: PG_CLIENT_HOST,
+});
+
 app.get("/", (req, res) => {
   res.render("index.ejs");
 });
