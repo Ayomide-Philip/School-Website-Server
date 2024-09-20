@@ -337,3 +337,7 @@ div.thank-you-message>p {
         align-items: center;
     }
 }
+
+span.email {
+    font-weight: bolder;
+}
