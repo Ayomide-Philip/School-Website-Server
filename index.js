@@ -21,7 +21,7 @@ db.connect();
 
 async function sendContact(name, email, message) {
   const request = await db.query(
-    "INSERT INTO contact_message (name,email_address,message) VALUES ($1,$2,$3) RETURNING email_address",
+    "INSERT INTO contact_message (contact_name,email_address,contact_message) VALUES ($1,$2,$3) RETURNING email_address",
     [name, email, message]
   );
   return request;
@@ -53,8 +53,7 @@ app.post("/contact", async (req, res) => {
   const message = req.body.message;
   try {
     const response = await sendContact(name, email, message);
-    console.log(response);
-    res.render("contact.ejs", { message: req.body });
+    res.render("contact.ejs", { message: response.rows[0].email_address });
   } catch (error) {
     console.log(error);
   }
