@@ -51,6 +51,11 @@ app.get("/admission", (req, res) => {
   res.render("admission.ejs");
 });
 
+app.post("/admission", (req,res)=>{
+  console.log(req.body);
+  
+})
+
 app.post("/contact", async (req, res) => {
   const name = req.body.name;
   const email = req.body.emailAddress;
