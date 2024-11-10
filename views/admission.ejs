@@ -1,0 +1,243 @@
+<%- include("partials/header.ejs") %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="./stylesheet/admission.css">
+    <!-- End section of the nav bar -->
+    <!-- ========== Start of th main content ========== -->
+    <div class="main-container">
+        <div class="image-container">
+            <div class="image">
+                <img src="./images/school_image-container.jpg" alt="Fountain Option Knowledge High School">
+            </div>
+            <div class="text-overlay">
+                <h1>Fountain Option Knowledge High School</h1>
+                <p>Admission</p>
+            </div>
+        </div>
+        <!-- ========== Start of the content section ========== -->
+        <div class="content-container">
+            <div class="form">
+                <div class="form-container">
+                    <div class="logo">
+                        <div class="logo-image">
+                            <img src="./images/school_logo.jpg" alt="school_logo">
+                        </div>
+                        <div class="logo-heading">
+                            <h1>Admission Form</h1>
+                        </div>
+                    </div>
+                    
+                    <form action="/admission" method="post" >
+                        <h3>Personal Information:</h3>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="fName">First Name:</label>
+                                    <input type="text" name="fName" id="fName" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="lName">Last Name:</label>
+                                    <input type="text" name="lName" id="lName" placeholder="Last Name" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="oName">Middle Name:</label>
+                                    <input type="text" name="oName" id="oName" placeholder="Middle Name(Optional)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="homeAddress">Home Address:</label>
+                            <input type="text" name="homeAddress" id="homeAddress" placeholder="Permanent Home Address"
+                                required>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="sex">Gender:</label>
+                                    <div class="radio">
+                                        <input type="radio" name="gender" id="Male" value="Male"> Male
+                                    </div>
+                                    <div class="radio">
+                                        <input type="radio" name="gender" id="female" value="Female"> Female
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="dob">Date Of Birth:</label>
+                                    <input type="text" id="birthdate" name="birthdate"
+                                        placeholder="Select your birthdate">
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="sex">Age:</label>
+                                    <input type="number" name="age" id="age" placeholder="Input your Age" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="lga">Local Government:</label>
+                                    <input type="text" name="lga" id="lga" placeholder="Local Government" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="state">State of Origin:</label>
+                                    <input type="text" name="state" id="state" placeholder="State of Origin" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="oName">Nationality:</label>
+                                    <input type="text" name="nationality" id="nationality" placeholder="Nationality"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="religion">Religion:</label>
+                                    <input type="text" name="religion" id="religion" placeholder="Religion" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="state">Denomination:</label>
+                                    <input type="text" name="denomination" id="denomination" placeholder="Denomination"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="schoolAttended">Last School Attended:</label>
+                            <input type="text" name="schoolAttended" id="schoolAttended"
+                                placeholder="Input the School you have attended." required>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="lastClass">Last Class Passed:</label>
+                                    <input type="text" name="lastClass" id="lastClass" placeholder="Last Class Passed"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="currentClass">Current Class:</label>
+                                    <select id="lastClass" name="lastClass">
+                                        <option value="JSS1">JSS1</option>
+                                        <option value="JSS2">JSS2</option>
+                                        <option value="SSS1">SSS1</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Parent Information:</h3>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="fatherName">Father Name:</label>
+                                    <input type="text" name="fatherName" id="fatherName" placeholder="Father Name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="fatherOccupation">Father Occupation:</label>
+                                    <input type="text" name="fatherOccupation" id="fatherOccupation"
+                                        placeholder="Father Occupation" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="motherName">Mother Name:</label>
+                                    <input type="text" name="motherName" id="motherName" placeholder="Mother Name"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="motherOccupation">Mother Occupation:</label>
+                                    <input type="text" name="motherOccupation" id="motherOccupation"
+                                        placeholder="Mother Occupation" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="emailAddress">Email Address:</label>
+                            <input type="text" name="emailAddress" id="emailAddress"
+                                placeholder="Input your Email Address" required>
+                        </div>
+                        <div class="input">
+                            <div class="item">
+                                <div class="input">
+                                    <label for="fatherNumber">Father Telephone:</label>
+                                    <input type="number" name="fatherNumber" id="fatherNumber"
+                                        placeholder="Father Telephone" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="motherNumber">Mother Telephone:</label>
+                                    <input type="number" name="motherNumber" id="motherNumber"
+                                        placeholder="Mother Telephone" required>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="input">
+                                    <label for="guidanNumber">Guidan Telephone:</label>
+                                    <input type="number" name="guidanNumber" id="guidanNumber"
+                                        placeholder="Guidan Telephone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input">
+                            <label for="parentAddress">Parent Contact:</label>
+                            <input type="text" name="parentAddress" id="parentAddress"
+                                placeholder="Parent Contact Address" required>
+                        </div>
+                        <div class="input">
+                            <textarea name="moreInformation" id="moreInfo" cols="30" rows="10"
+                                placeholder="Input more information that you will need the school to know about you"></textarea>
+                        </div>
+                        <div class="submit-button">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- ========== End of the content section ========== -->
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+    <script src="./script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        const today = new Date();
+        const formattedDate = today.toISOString().split('T')[0];
+        document.addEventListener("DOMContentLoaded", function () {
+            flatpickr("#birthdate", {
+                dateFormat: "Y-m-d",
+                minDate: "1900-01-01",
+                maxDate: formattedDate,
+                altInput: true,
+                altFormat: "F j, Y",
+                weekNumbers: true,
+            });
+        });
+    </script>
+
+</body>
+
+</html>
