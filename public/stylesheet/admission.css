@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+.navbar-brand>img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+nav {
+    background-color: green !important;
+    z-index: 1;
+
+}
+
+nav a {
+    color: white !important;
+    font-family: "SUSE", sans-serif;
+}
+
+nav a:hover {
+    color: black !important;
+    border: none;
+    border-bottom: 2px solid;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+nav {
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.image>img {
+    width: 100%;
+    height: 70vh;
+    object-fit: fill;
+
+}
+
+div.image {
+    width: 100%;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    margin-top: 5px;
+}
+
+.image-container>.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 80%;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: green;
+    color: white;
+    padding: 1.5%;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: large;
+}
+
+
+div.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+div.social-media-account>div>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+div.social-media-account {
+    display: flex
+}
+
+div.social-media-account>div {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+div.social-media-account>div>a>img:hover {
+    padding-bottom: 20px;
+}
+
+
+.image-container>.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 80%;
+    text-align: center;
+}
+
+
+.text-overlay>h1 {
+    font-family: "SUSE", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 5px 2px black;
+    animation: bounceInDown;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.text-overlay>p {
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 2px 3px 2px black;
+    animation: bounceInDown;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    font-size: xx-large;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: 5px;
+}
+
+div.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    width: 100%;
+    background-color: wheat;
+}
+
+div.form>div.form-container>form>div.input input[type="text"],
+div.form>div.form-container>form>div.input input[type="number"] {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid green;
+    outline: none;
+    background-color: inherit;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    font-size: larger;
+    height: 30px;
+}
+
+div.form>div.form-container>form>div.input input[type="text"]:focus,
+div.form>div.form-container>form>div.input input[type="number"]:focus {
+    border-bottom: 2px solid green;
+}
+
+div.form>div.form-container>form>div.input input[type="text"]:focus::placeholder,
+div.form>div.form-container>form>div.input input[type="number"]:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+div.form>div.form-container h1 {
+    text-align: center;
+    color: green;
+}
+
+div.form {
+    width: 90%;
+}
+
+div.form-container {
+    width: 100%;
+    padding: 2%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+
+div.radio {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+input[type="date"] {
+    width: 250px;
+}
+
+form h1 {
+    font-size: xx-large;
+    font-family: "Poppins", sans-serif;
+}
+
+form h4 {
+    font-size: large;
+    font-family: "Poppins", sans-serif;
+}
+
+form h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+div.logo-image {
+    width: 20%;
+}
+
+div.logo>.logo-image>img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+div.logo {
+    width: 100%;
+    display: flex;
+}
+
+div.logo-heading {
+    width: 60%;
+}
+
+div.logo-passport {
+    width: 20%;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+div.logo-passport>img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 700px) {
+    div.logo>.logo-image>img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+
+    div.logo-passport>img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+div.input {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+label {
+    max-width: fit-content;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="number"] {
+    flex: 1;
+}
+
+.item {
+    flex: 1 1 30%;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .item {
+        flex: 1 1 100%;
+    }
+}
+
+input[type="date"]:disabled {
+    background-color: #f7f7f7;
+    border-color: #ccc;
+}
+
+select {
+    width: 200px;
+    padding: 5px 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover and focus effects */
+select:hover,
+select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Subtle glow */
+}
+
+/* Custom background with a pseudo-element for the dropdown arrow */
+select::after {
+    content: "▼";
+    /* Unicode character for the dropdown arrow */
+    font-size: 16px;
+    color: #555;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* So the user can still interact with the select */
+}
+
+/* Positioning the select container */
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+div.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"] {
+    width: 200px;
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    border: 1px solid white;
+    height: 50px;
+}
+
+input[type="submit"]:hover {
+    color: green;
+    background-color: white;
+    border: 1px solid green;
+}
+
+textarea {
+    width: 100%;
+    border: 1px solid green;
+    outline: none;
+    background-color: inherit;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+    font-size: larger;
+}
+
+textarea:focus-within {
+    border: 2px solid green;
+}
