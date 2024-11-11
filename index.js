@@ -53,7 +53,6 @@ app.get("/admission", (req, res) => {
 
 app.post("/admission", (req,res)=>{
   console.log(req.body);
-  
 })
 
 app.post("/contact", async (req, res) => {
