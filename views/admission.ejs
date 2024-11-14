@@ -25,8 +25,8 @@
                             <h1>Admission Form</h1>
                         </div>
                     </div>
-                    
-                    <form action="/admission" method="post" >
+
+                    <form action="/submit" method="post">
                         <h3>Personal Information:</h3>
                         <div class="input">
                             <div class="item">
@@ -131,7 +131,7 @@
                             <div class="item">
                                 <div class="input">
                                     <label for="currentClass">Current Class:</label>
-                                    <select id="lastClass" name="lastClass">
+                                    <select id="currentClass" name="currentClass">
                                         <option value="JSS1">JSS1</option>
                                         <option value="JSS2">JSS2</option>
                                         <option value="SSS1">SSS1</option>
@@ -221,23 +221,23 @@
     </div>
 
     <%- include("partials/footer.ejs") %>
-    <script src="./script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script>
-        const today = new Date();
-        const formattedDate = today.toISOString().split('T')[0];
-        document.addEventListener("DOMContentLoaded", function () {
-            flatpickr("#birthdate", {
-                dateFormat: "Y-m-d",
-                minDate: "1900-01-01",
-                maxDate: formattedDate,
-                altInput: true,
-                altFormat: "F j, Y",
-                weekNumbers: true,
+        <script src="./script/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            const today = new Date();
+            const formattedDate = today.toISOString().split('T')[0];
+            document.addEventListener("DOMContentLoaded", function () {
+                flatpickr("#birthdate", {
+                    dateFormat: "Y-m-d",
+                    minDate: "1900-01-01",
+                    maxDate: formattedDate,
+                    altInput: true,
+                    altFormat: "F j, Y",
+                    weekNumbers: true,
+                });
             });
-        });
-    </script>
+        </script>
 
-</body>
+        </body>
 
-</html>
+        </html>
