@@ -51,8 +51,21 @@ app.get("/admission", (req, res) => {
   res.render("admission.ejs");
 });
 
-app.post("/submit", (req, res) => {
+app.post("/submit", async (req, res) => {
   console.log(req.body);
+
+  const fName = req.body.fName;
+  const lName = req.body.lName;
+  const homeAddress = req.body.homeAddress;
+  try {
+    const request = await db.query(
+      "INSERT INTO schooladmisionstudentname (firstname, lastname, homeaddress) VALUES ($1, $2,$3) RETURNING  id",
+      [fName, lName, homeAddress]
+    );
+    console.log(request.rows[0].id);
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.post("/contact", async (req, res) => {
