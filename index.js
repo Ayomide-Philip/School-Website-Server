@@ -66,6 +66,24 @@ app.post("/submit", async (req, res) => {
       [fName, lName, homeAddress, gender]
     );
     // console.log(request.rows[0].id);
+    const studentInfo = await db.query(
+      "INSERT INTO studentinfo (id , oname, birthdate, age, lga, yourstate, nationality, religion, denomination, schoolattended, lastclass, currentclass, youremailaddress) VALUES ($1, $2,$3, $4,$5,$6,$7,$8,$9,$10,$11,$12,$13)",
+      [
+        request.rows[0].id,
+        req.body.oName,
+        req.body.birthdate,
+        req.body.age,
+        req.body.lga,
+        req.body.state,
+        req.body.nationality,
+        req.body.religion,
+        req.body.denomination,
+        req.body.schoolAttended,
+        req.body.lastClass,
+        req.body.currentClass,
+        req.body.yourEmailAddress,
+      ]
+    );
   } catch (error) {
     console.log(error);
     if (error) {
