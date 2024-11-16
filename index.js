@@ -57,15 +57,28 @@ app.post("/submit", async (req, res) => {
   const fName = req.body.fName;
   const lName = req.body.lName;
   const homeAddress = req.body.homeAddress;
+  const gender = req.body.gender;
+  var userLookAlike = false;
+
   try {
     const request = await db.query(
-      "INSERT INTO schooladmisionstudentname (firstname, lastname, homeaddress) VALUES ($1, $2,$3) RETURNING  id",
-      [fName, lName, homeAddress]
+      "INSERT INTO schooladmisionstudentname (firstname, lastname, homeaddress,gender) VALUES ($1, $2,$3,$4) RETURNING  id",
+      [fName, lName, homeAddress, gender]
     );
-    console.log(request.rows[0].id);
+    // console.log(request.rows[0].id);
   } catch (error) {
     console.log(error);
+
+    if (error) {
+      userLookAlike = true;
+    }
   }
+
+  if (userLookAlike) {
+    res.redirect("/login");
+  }
+
+  console.log(userLookAlike);
 });
 
 app.post("/contact", async (req, res) => {
