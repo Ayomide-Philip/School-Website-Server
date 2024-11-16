@@ -68,7 +68,6 @@ app.post("/submit", async (req, res) => {
     // console.log(request.rows[0].id);
   } catch (error) {
     console.log(error);
-
     if (error) {
       userLookAlike = true;
     }
