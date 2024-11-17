@@ -101,7 +101,9 @@ app.post("/submit", async (req, res) => {
             req.body.moreInformation,
           ]
         );
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     } catch (error) {
       console.log(error);
     }
